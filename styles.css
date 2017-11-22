@@ -1,0 +1,407 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Karla|Poppins|Cinzel);
+
+/**********
+ whole body
+***********************/
+body  {
+	display: block;
+	margin: auto;
+	background-color: #010505;
+	color: #FFFFFF;
+	width: 100%;
+	height: 100%;
+	font-family: 'Karla', sans-serif;
+}
+/************
+header
+********************/
+
+header {
+	z-index: 1;
+	height: 10%;
+	display: flex;
+	background-color: #FFFFFF;
+	position: fixed;
+	top: 0;
+	margin: none;
+	width: 100%;
+	color: #010505;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+/*****
+nav button
+**************/
+.open_nav {
+	width: 15%;
+	background-color: transparent;
+	color: #000000;
+	font-size: 20px;
+	border: none;
+}
+
+.close_nav {
+	display: none;
+	background-color: transparent;
+	color: #000000;
+	font-size: 20px;
+	border: none;
+}
+
+/**************
+navigation on header for smaller screens
+************************************************/
+.nav {
+	width: 100%;
+	height: auto;
+	display: none;
+	background-color: #fff;
+	color:#000;
+	top: 100%;
+	padding: 0;
+	z-index: 2;
+	position: absolute;
+}
+
+
+
+/********
+list for mobile/smaller screens
+***********************************/
+#mobile-nav--list {
+	list-style-type: none;
+	width: 98%;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	text-align: center;
+}
+
+.navlink {
+	width: 88%;
+	display: block;
+	margin: 0;
+	height: 100px;
+	padding: 20px;
+}
+
+.navlink:hover {
+	background-color: #E1EDE2;	
+}
+/*************
+introductory div
+*******************/
+.intro-div {
+	width: 90%;
+	height: auto;
+	display: block;
+	position: relative;
+	margin-top: 70%;
+	margin-left: 5%;
+	margin-bottom: 0;
+	margin-right: 5%;
+}
+
+/*********
+introductory paragraph
+*************************/
+ .intro {
+	padding: 20px;
+	height: 30px;
+	text-align: left;
+	display: block;
+}
+
+/*********
+INTRO BUTTON
+******************/
+.intro-button {
+	display: block;
+	width: 30%;
+	background-color: #65C2ED;
+	border: 1px solid #000;;
+	border-radius: 10px;
+	height: 50px;
+	margin: auto;
+}
+
+/******
+ next_button
+****************/
+.next_page {
+	width: 10%;
+	display: none;
+	margin: 20% auto;
+	font-size: 19px;
+	background-color: #65C2ED;
+	border-radius: 50%;
+	height: 30px;
+	border: 0;
+}
+
+/*******
+social media icons
+*************************/
+.icons {
+	position: absolute;
+	display: none;
+	right: 0;
+	font-size: 20px;
+	color: #fff;
+}
+
+.icons a {
+	color: #fff;
+}
+
+.logo {
+	margin: auto;
+	font-size: 20px;
+	font-family: 'Cinzel', serif;
+}
+
+
+.main {
+	font-family: 'Poppins', sans-serif;
+	height: 100%;
+	display: none;
+	margin: 20px;
+	text-align: left;
+}
+/*********
+about me div
+********************/
+.about {
+	position: absolute;
+	font-family: 'Poppins', sans-serif;
+	width: 87%;
+	margin: 30px 0;
+	display: none;
+	text-align: justify;
+	padding: 20px;
+}
+
+.about h3 {
+	text-align: center;
+}
+/*****
+links
+**********/
+a {
+	color: inherit;
+}
+ .about a, .project a, .Contact a {
+	color: rgb(205, 147, 92);
+}
+
+a:link {
+	color: #FFD6F4;
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	color: #FFD6F4;
+	background-color: #65C2ED;
+}
+/***********
+project section
+********************/
+.projects {
+	position: absolute;
+	font-family: 'Poppins', sans-serif;
+	width: 87%;
+	margin: 30px 0;
+	display: none;
+	text-align: left;
+	padding: 20px;
+}
+
+.child-a{
+	width: 100%;
+	padding: 5px;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-content: center;
+	height: 100%;
+	margin-bottom: 20px;
+}
+
+/********
+description/short summary of project
+****************************************/
+.project-description {
+	width: 100%;
+	height: 100%;
+}
+
+/*****
+image of project
+***********************/
+
+.project {
+	display: none;
+	margin: auto;
+	width:  100%;
+	max-width: 300px;
+	height: 100%;
+}
+/*** 
+Contact details
+*********************/
+.Contact {
+	position: absolute;
+	width: 87%;
+	margin: 30% 0;
+	display: none;
+	text-align: justify;
+	padding: 20px;
+}
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-width : 600px) {
+/* Styles */
+body {
+	font-size: 18px;
+}
+
+
+.open_nav {
+	display: none;
+}
+
+.nav {
+	position: relative;
+	display: flex;
+	right: 0;
+	top: 0;
+	width: 60%;
+	height: 50px;
+	padding: 0;
+	margin: auto ;
+}
+
+#mobile-nav--list {
+	width: 100%;
+	height: 100%;
+}
+
+.navlink {
+	float: left;
+	width: 26%;
+	height: 50%;
+	padding: 10px;
+}
+
+.intro-div {
+	margin-top: 25%;
+}
+
+.intro {
+	text-align: center;
+	font-size: 20px;
+}
+
+.intro-button {
+	width: 15%;
+}
+
+.next_page {
+	width: 30px;
+	margin: 1% auto;
+}
+
+.about {
+	margin: 100px  20px 20px 20px;
+	width: 90%;
+}
+
+.Contact {
+	margin: 100px  20px 20px 20px;
+	border: 1px solid red;
+}
+
+}
+
+
+
+@media only screen 
+and (min-width : 700px) {
+/* Styles */
+
+.projects {
+	text-align: left;
+	margin: 100px  20px 20px 20px;
+
+}
+
+.project-description {
+	width: 45%;
+	height: 100%;
+}
+
+.project-image {
+	width: 50%;
+}
+
+.project {
+	width: 100%;
+	height: 100%;
+	display: block;
+	max-width: 600px;
+}
+
+}
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-width : 900px) {
+/* Styles */
+.about {
+	width: 75%;
+}
+
+.Contact {
+	margin: 100px  20px 20px 20px;
+	border: 1px solid red;
+	width: 75%;
+}
+
+}
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+/* Styles */
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}
+
+
