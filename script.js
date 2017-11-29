@@ -22,11 +22,11 @@ $(function(){
 	
 	function delay(){
 		setTimeout(function() {
-			$('.icons').fadeIn(500);
+			$('.icons').fadeIn();
 			$('.next_page')
 					.fadeIn()
 					.css('display', 'block');
-		}, 4000);
+		}, 3600);
 	}
 
 	$('a .navlink').click(()=>{
