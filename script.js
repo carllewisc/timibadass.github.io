@@ -42,7 +42,7 @@ $(function(){
 		$('.open_nav').hide();
 		$('.close_nav').show();
 	});
-	
+
 	$('.close_nav').click(() => {
 		$('.nav').slideUp(500);
 		$('.close_nav').hide();
@@ -92,11 +92,33 @@ $(function(){
 			$('.about').hide();
 	});
 
+	$('.project-image').mouseover(function(){
+		$(this).css({
+			'-ms-transform': 'translate(-50px, -100px)', /* IE 9 */
+			'-webkit-transform': 'translate(-50px, -100px)', /* Safari */
+			'transform': 'translate(-50px, -100px)'
+		})
+	});
+
+	$('.project-image').mouseleave(function() {
+		$(this).css({
+			'-ms-transform': 'translate(0, 0)', /* IE 9 */
+			'-webkit-transform': 'translate(0, 0)', /* Safari */
+			'transform': 'translate(0, 0)'
+		})
+	})
+
 	$(window).scroll(() => {
+		if($(window).width() < 600) {
+			$('.nav').slideUp(500);
+			$('.close_nav').hide();
+			$('.open_nav').show();
+		}
+
 		if ($(window).scrollTop() > 0) {
 			$('header').css({
 				'background-color': 'transparent',
-				'opacity': '0.4'
+				'opacity': '1'
 			});
 			if($(window).width() > 600) {
 				$('.nav').css({
