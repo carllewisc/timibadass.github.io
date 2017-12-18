@@ -29,6 +29,8 @@ header {
 	color: #010505;
 	flex-direction: row;
 	justify-content: space-between;
+	-webkit-transition: height .5s ease-in-out;
+	transition: height .5s ease-in-out;
 }
 
 /*****
@@ -361,7 +363,7 @@ and (min-width : 700px) {
 }
 
 .project-image {
-	width: 50%;
+	width: 25%;
 }
 
 .project {
