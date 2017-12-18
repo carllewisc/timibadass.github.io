@@ -31,31 +31,46 @@ $(function(){
 
 	$('a .navlink').click(()=>{
 		if($(window).width() < 600) {
-			$('.nav').fadeOut(500);
+			$('.navlink').hide();
+			$('.nav').css({
+				'height': '0'
+			})
 			$('.close_nav').hide();
 			$('.open_nav').show();
 		}
 	})
 	
 	$('.open_nav').click(() => {
-		$('.nav').slideDown(500);
 		$('.open_nav').hide();
+		$('.navlink').show();
 		$('.close_nav').show();
+		$('.nav').css({
+			'display': 'block',
+			'height': '50vh'
+		})
 	});
-
+	
 	$('.close_nav').click(() => {
-		$('.nav').slideUp(500);
+		$('.navlink').hide();
+		$('.nav').css({
+				'height': '0',
+				'display': 'block'
+			})
 		$('.close_nav').hide();
 		$('.open_nav').show();
 	});
-
+	
 	$('#home').click(function() {
 		$('.about').hide();
 		$('.intro-div').fadeIn(500);
 		$('body').css('background-color', '#010505');
 		$('.projects').hide();
 		if($(window).width() < 600) {
-			$('.mobile-nav').fadeOut(500);
+			$('.nav').css({
+				'height': '0'
+			})
+			$('.close_nav').hide();
+			$('.open_nav').show();
 		}
 	});
 	
@@ -66,7 +81,9 @@ $(function(){
 		$('.intro-div').hide();
 		$('.projects').hide();
 		if($(window).width() < 600) {
-			$('.nav').hide();
+			$('.nav').css({
+				'height': '0'
+			})
 		}
 	});
 	
@@ -76,7 +93,9 @@ $(function(){
 		$('.intro-div').hide();
 		$('.projects').hide();
 		if($(window).width() < 600) {
-			$('.mobile-nav').hide();
+			$('.nav').css({
+				'height': '0'
+			})
 		}
 	});
 	
@@ -93,19 +112,25 @@ $(function(){
 	});
 
 	$('.project-image').mouseover(function(){
-		$(this).css({
-			'-ms-transform': 'scale(1.5, 1.5)', /* IE 9 */
-			'-webkit-transform': 'scale(1.5, 1.5)', /* Safari */
-			'transform': 'scale(1.5, 1.5)'
-		})
+		if($(window).width() > 899){
+			$(this).css({
+				'-ms-transform': 'scale(1.5, 1.5)', /* IE 9 */
+				'-webkit-transform': 'scale(1.5, 1.5)', /* Safari */
+				'transform': 'scale(1.5, 1.5)'
+			})
+		} else {
+			return;
+		}
 	});
 
 	$('.project-image').mouseleave(function() {
-		$(this).css({
-			'-ms-transform': 'scale(1, 1)', /* IE 9 */
-			'-webkit-transform': 'scale(1, 1)', /* Safari */
-			'transform': 'scale(1, 1)'
-		})
+		if($(window).width() > 900) {
+			$(this).css({
+				'-ms-transform': 'scale(1, 1)', /* IE 9 */
+				'-webkit-transform': 'scale(1, 1)', /* Safari */
+				'transform': 'scale(1, 1)'
+			})
+		}
 	})
 
 	$(window).scroll(() => {
@@ -130,8 +155,6 @@ $(function(){
 			});
 		}
 	})
-
-	
 
 });
 

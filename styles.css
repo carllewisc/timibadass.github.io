@@ -57,14 +57,16 @@ navigation on header for smaller screens
 ************************************************/
 .nav {
 	width: 100%;
-	height: auto;
-	display: none;
+	height: 0;
+	display: block;
 	background-color: #fff;
 	color:#000;
 	top: 100%;
 	padding: 0;
 	z-index: 2;
 	position: absolute;
+	-webkit-transition: height 1s ease-in-out;
+	transition: height 1s ease-in-out;
 }
 
 
@@ -345,6 +347,18 @@ body {
 
 }
 
+@media only screen and (min-width: 700px) and (max-width: 900px) {
+	.project-image {
+		width: 50%;
+	}
+}
+
+@media screen and (min-width: 901px) {
+
+	.project-image {
+		width: 30%;
+	}
+}
 
 
 @media only screen 
@@ -362,9 +376,6 @@ and (min-width : 700px) {
 	height: 100%;
 }
 
-.project-image {
-	width: 25%;
-}
 
 .project {
 	width: 100%;
