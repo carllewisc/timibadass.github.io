@@ -833,12 +833,20 @@ a {
         line-height: 28px;
     }
 
-    .work_section > .faded_section_name > h1, .teaching_section > .faded_section_name > h1 {
+    .work_section > .faded_section_name > h1 {
         font-weight: 800;
         font-size: 150px;
         line-height: 163px;
         letter-spacing: 0.01em;
         color: #1D1D1D;
+    }
+
+    .teaching_section {
+        padding-top: 100px;
+    }
+
+    .teaching_section > .faded_section_name > h1 {
+        font-size: 110px;
     }
 
     .teaching_section > .faded_section_name {
@@ -881,5 +889,16 @@ a {
 @media (min-width: 1200px) {
     body {
         max-width: 800px;
+    }
+
+    .skills {
+        margin-right: 50px;
+        margin-top: 50px;
+    }
+
+    .about_info_long {
+        padding-top: 50px;
+        max-width: 500px;
+        height: 350px;
     }
 }
