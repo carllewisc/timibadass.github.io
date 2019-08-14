@@ -902,7 +902,11 @@ a:hover {
 
 @media (min-width: 1200px) {
     body {
-        max-width: 800px;
+        max-width: 900px;
+    }
+
+    .about_info_short {
+        max-width: 100%;
     }
 
     .skills {
@@ -912,7 +916,17 @@ a:hover {
 
     .about_info_long {
         padding-top: 50px;
-        max-width: 500px;
+        max-width: 600px;
         height: 350px;
+    }
+
+    .about_info_long > p {
+        margin-bottom: 20px;
+    } 
+
+    .contact_me {
+        margin-top: 30px;
+        padding-top: 100px;
+        margin-bottom: 100px;
     }
 }
