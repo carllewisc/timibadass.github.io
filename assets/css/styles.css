@@ -69,13 +69,20 @@ a {
   width: calc(100% - 30px);
   height: auto;
   padding: 0 15px;
-  margin-top: 70px;
+  position: relative;
+  margin-top: 120px;
 }
 
 .switch {
   width: 80px;
   display: flex;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  right: 40px;
+  z-index: 3;
   height: 35px;
+  margin-top: 75px;
   padding: 0 5px;
   justify-content: space-between;
   border-radius: 50px;
@@ -88,7 +95,7 @@ a {
 }
 
 .switch--dark {
-  background-color: #000;
+  background-color: #1d1d1d;
 }
 
 .switch__button {
