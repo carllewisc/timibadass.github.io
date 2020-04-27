@@ -465,6 +465,13 @@ a:hover {
   margin-right: 0;
 }
 
+.flaticon__attribute {
+  display: block;
+  text-align: center;
+  margin: 10px auto;
+  margin-bottom: 20px;
+}
+
 @media (min-width: 768px) {
   .header {
     left: 0;
